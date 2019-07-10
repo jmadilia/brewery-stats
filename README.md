@@ -6,4 +6,4 @@ A single page application that uses React to display a list of breweries with th
 2. Make note of the location of the repo : `pwd` (This location will be referred to later as **[repo_location]**.)
 2. Install [NodeJS](https://nodejs.org/en/).
 3. Navigate to the app directory in the repo : `cd [repo_location]/app/`.
-5. Run the app : `npm start`.
+5. Run the app : `npm start`
