@@ -28,7 +28,7 @@ class Details extends Component {
         }
 
         const brewLocation = (this.state.brewery_info.longitude === null || this.state.brewery_info.latitude === null) 
-            ? "*Coordinates not available!*"
+            ? "*coordinates not given*"
             : <Map 
                 google={this.props.google}
                 zoom={this.props.zoom}
