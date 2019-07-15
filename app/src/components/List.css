@@ -1,0 +1,11 @@
+body {
+    font: 20px "Trebuchet MS", Futura, sans-serif;
+    margin: 20px;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+}
