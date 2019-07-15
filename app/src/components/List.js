@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Details from './Details';
-import './List.css';
+import './List.scss';
 
 class List extends Component {
     constructor(props) {
