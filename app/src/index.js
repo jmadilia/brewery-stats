@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-
+import 'bootstrap/dist/css/bootstrap.css';
 import List from "./components/List";
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            city: "lebanon",
-            state: "pennsylvania",
+            city: "Harrisburg",
+            state: "Pennsylvania",
             breweries: [],
             loading: true,
         }
@@ -19,7 +18,10 @@ class App extends Component {
         const url = 'https://api.openbrewerydb.org/breweries';
         const response = await fetch(url + '?by_city=' + this.state.city + '&by_state=' + this.state.state);
         const data = await response.json();
-        this.setState({ breweries: data, loading: false });
+        this.setState({ 
+            breweries: data,
+            loading: false,
+        });
     }
 
     render() {
@@ -35,7 +37,6 @@ class App extends Component {
             <div>
                 <List breweries={this.state.breweries} />
             </div>
-            
         )
     }
 }

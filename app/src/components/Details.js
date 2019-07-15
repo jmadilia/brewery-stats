@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import './index.css';
-
 import List from './List';
+import './Details.css';
 
 class Details extends Component {
     constructor(props) {
@@ -28,23 +27,24 @@ class Details extends Component {
         }
 
         const brewLocation = (this.state.brewery_info.longitude === null || this.state.brewery_info.latitude === null) 
-            ? "*coordinates not given*"
-            : <Map 
+            ? "*Map location not available!*"
+            : <Map
                 google={this.props.google}
-                zoom={this.props.zoom}
-                style={{ height: '100%', width: '75%' }}
+                zoom={15}
+                style={{ height: '85%', width: '100%' }}
                 initialCenter={coordinates}
               >
-                <Marker position={coordinates}/>
+                <Marker name={this.state.brewery_info.name} position={coordinates}/>
               </Map>
 
         const detailsJSX = (
             <div>
-                <button onClick={this._handleBackButton}> <b>BACK</b> </button>
-                <div> <u>Details for <b>{this.state.brewery_info.name}</b></u>: </div>
+                <button onClick={this._handleBackButton} className="BackButton"> <b>BACK</b> </button>
+                <div> <u><b>{this.state.brewery_info.name}</b></u>: </div>
                 <div> <b>Address</b>: {this.state.brewery_info.street}, {this.state.brewery_info.city}, {this.state.brewery_info.state}, {this.state.brewery_info.postal_code} </div>
+                <br/>
                 <div>
-                    <b>Location</b>: {brewLocation}
+                    {brewLocation}
                 </div>
             </div>
         )

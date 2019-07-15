@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './index.css';
-
 import Details from './Details';
+import './List.css';
 
 class List extends Component {
     constructor(props) {
@@ -45,10 +44,13 @@ class List extends Component {
 
             return (
                 <div key={brewery.id}>
-                    <div> <b>Name</b>: {brewery_info.name} <button onClick={this._handleDetailsClick.bind(this, brewery_info)}> <b>More details</b> </button> </div> 
-                    <div> <b>Type</b>: {brewery_info.type}</div>
-                    <div> <b>Address</b>: {brewery_info.street}, {brewery_info.city}, {brewery_info.state}, {brewery_info.postal_code}</div>
-                    <div> <b>Website</b>: {brewery_info.website}</div>
+                    <ul>
+                        <li> <i><u>{brewery_info.name}</u></i> </li>
+                        <li> <b>Type</b>: {brewery_info.type} </li>
+                        <li> <b>Address</b>: {brewery_info.street}, {brewery_info.city}, {brewery_info.state}, {brewery_info.postal_code} </li>
+                        <li> <b>Website</b>: {brewery_info.website} </li>
+                    </ul>
+                    <button onClick={this._handleDetailsClick.bind(this, brewery_info)}> <b>More details</b> </button>
                     <br/>
                 </div>
             )
