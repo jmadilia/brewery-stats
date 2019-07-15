@@ -1,8 +1,9 @@
+$font-stack:   Helvetica, sans-serif;
+
 body {
-    font: 20px "Trebuchet MS", Futura, sans-serif;
-    margin: 20px;
-    text-align: center;
+    font: 100% $font-stack;
     background-color: blanchedalmond;
+    text-align: center;
 }
 
 ul {

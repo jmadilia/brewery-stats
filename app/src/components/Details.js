@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import List from './List';
-import './Details.css';
+import './Details.scss';
 
 class Details extends Component {
     constructor(props) {
